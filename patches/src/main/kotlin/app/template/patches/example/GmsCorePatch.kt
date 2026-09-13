@@ -3,7 +3,6 @@ package app.template.patches.example
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
-import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.resourcePatch
 import app.morphe.patcher.patch.bytecodePatch
@@ -320,22 +319,6 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
     
 
         AccountValidityMonitorCheckFingerprint.method.addInstruction(0, "return-void")
-
-        FrictionlessEligibilityFingerprint.method.apply {
-            val instructions = implementation?.instructions
-                ?: throw PatchException("Frictionless eligibility method has no implementation.")
-            val clearSelectedAccountIndex = instructions.indexOfFirst { instruction ->
-                ((instruction as? ReferenceInstruction)?.reference as? MethodReference)?.let { ref ->
-                    ref.name == "o" && ref.returnType == "V" && ref.parameterTypes.toList() == listOf("I")
-                } == true
-            }
-            if (clearSelectedAccountIndex < 0) throw PatchException("Could not find selected account clear call.")
-
-            val accountHandlerClass = ((instructions[clearSelectedAccountIndex] as ReferenceInstruction)
-                .reference as MethodReference).definingClass
-
-            replaceInstruction(clearSelectedAccountIndex, "invoke-virtual {p0}, $accountHandlerClass->p()V")
-        }
 
         fun transform(string: String): String? =
             GMS_STRING_REPLACEMENTS[string]
