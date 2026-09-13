@@ -347,28 +347,6 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
                         it.parameterTypes.toList() == method.parameterTypes.toList()
                 } ?: return@forEach
 
-                val replacements = mutableMethod.implementation?.instructions
-                    ?.mapIndexedNotNull { index, instruction ->
-                        val string = ((instruction as? Instruction21c)?.reference as? StringReference)?.string
-                            ?: return@mapIndexedNotNull null
-                        val transformed = transform(string) ?: return@mapIndexedNotNull null
-
-                        index to BuilderInstruction21c(
-                            Opcode.CONST_STRING,
-                            instruction.registerA,
-                            ImmutableStringReference(transformed),
-                        )
-                    }
-                    .orEmpty()
-
-                replacements.forEach { (index, replacement) ->
-                    mutableMethod.replaceInstruction(index, replacement)
-                }
-            }
-        }
-    }
-}
-
 private fun transformAppPackageString(string: String): String? =
     when (string) {
         in APP_PERMISSIONS, in APP_AUTHORITIES -> string.prefixOrReplaceAppPackage()
