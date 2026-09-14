@@ -23,7 +23,6 @@ private const val ORIGINAL_PACKAGE_NAME = "com.google.android.apps.youtube.creat
 private const val DEFAULT_PATCHED_PACKAGE_NAME = "app.morphe.android.apps.youtube.creator"
 private const val GMS_CORE_VENDOR_GROUP = "app.revanced"
 private const val GMS_CORE_PACKAGE = "app.revanced.android.gms"
-private const val EXTENSION_CLASS = "Lapp/template/extension/extension/GmsCoreSupportPatch;"
 private var resolvedPackageName = DEFAULT_PATCHED_PACKAGE_NAME
 
 private val GMS_STRING_REPLACEMENTS = mapOf(
@@ -170,18 +169,6 @@ private val YtStudioMainActivityOnCreateFingerprint = Fingerprint(
     parameters = listOf("Landroid/os/Bundle;"),
 )
 
-private val GmsCoreVendorGroupFingerprint = Fingerprint(
-    custom = { method: Method, classDef: ClassDef ->
-        classDef.type == EXTENSION_CLASS && method.name == "getGmsCoreVendorGroupId"
-    },
-)
-
-private val OriginalPackageNameFingerprint = Fingerprint(
-    custom = { method: Method, classDef: ClassDef ->
-        classDef.type == EXTENSION_CLASS && method.name == "getOriginalPackageName"
-    },
-)
-
 private val ServiceCheckFingerprint = Fingerprint(
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
     returnType = "V",
@@ -204,7 +191,6 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
     default = true,
 ) {
     compatibleWith(YT_STUDIO_COMPATIBILITY)
-    extendWith("extensions/extension.mpe")
 
     dependsOn(
         resourcePatch {
@@ -298,22 +284,7 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
         },
     )
 
-    execute {
-        OriginalPackageNameFingerprint.method.addInstructions(
-            0,
-            "const-string v0, \"$ORIGINAL_PACKAGE_NAME\"\nreturn-object v0",
-        )
-
-        GmsCoreVendorGroupFingerprint.method.addInstructions(
-            0,
-            "const-string v0, \"$GMS_CORE_VENDOR_GROUP\"\nreturn-object v0",
-        )
-
-        YtStudioMainActivityOnCreateFingerprint.method.addInstruction(
-            0,
-            "invoke-static/range { p0 .. p0 }, $EXTENSION_CLASS->checkGmsCore(Landroid/app/Activity;)V",
-        )
-
+        execute {
         ServiceCheckFingerprint.method.addInstruction(0, "return-void")
 
         AccountValidityMonitorCheckFingerprint.method.addInstruction(
