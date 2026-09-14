@@ -1,3 +1,9 @@
+## [1.0.0-dev.6](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-09-14)
+
+### 🐛 Bug Fixes
+
+* Fixed open_pull_request.yml ([5e26955](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/5e2695501820aeab66d77e62e58492d03cbcc7f7))
+
 ## [1.0.0-dev.5](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-09-14)
 
 ### 🐛 Bug Fixes
