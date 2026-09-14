@@ -15,14 +15,14 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.0.0-dev.4](https://github.com/HelioFloxZ/YouTube-Studio-Patches/releases/tag/v1.0.0-dev.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+> **[v1.0.0-dev.5](https://github.com/HelioFloxZ/YouTube-Studio-Patches/releases/tag/v1.0.0-dev.5)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
 <details open>
 <summary>📦 YouTube Studio&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [GmsCore support](#gmscore-support) | Adds MicroG/GmsCore support metadata for YouTube Studio. |  |
+| [GmsCore support](#gmscore-support) | Adds MicroG support metadata for YouTube Studio. |  |
 
 </details>
 

@@ -1,3 +1,13 @@
+## [1.0.0-dev.5](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-09-14)
+
+### 🐛 Bug Fixes
+
+* Fixed bugs inside GmsCorePatch.kt ([19592e3](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/19592e308d1e9164eb2030e53cb8cd0458e6238b))
+* Fixed GmsCorePatch.kt ([02a8f3e](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/02a8f3eb9f2ba8b355717da1df909fe796707586))
+* Fixed GmsCorePatch.kt ([ecf732c](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/ecf732cf08a68f5d74d4bb3e7f2093a6d8eb434f))
+* Fixed Syntax Error in GmsCorePatch.kt ([4699e7b](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/4699e7b46dad5ea517955914243149fef06ff713))
+* Remove Google Photos frictionless eligibility fingerprint ([7600c8d](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/7600c8dd65a1a582efdfb99de404b24b4f80f4e6))
+
 ## [1.0.0-dev.4](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-09-02)
 
 ### 🐛 Bug Fixes
