@@ -316,8 +316,6 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
 
         ServiceCheckFingerprint.method.addInstruction(0, "return-void")
 
-    
-
         AccountValidityMonitorCheckFingerprint.method.addInstruction(0, "return-void")
 
         fun transform(string: String): String? =
@@ -328,47 +326,7 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
                     else -> null
                 }
 
-        getAllClassesWithStrings().forEach { classDef ->
-            if (classDef.type == EXTENSION_CLASS) return@forEach
-
-            val hasMatch = classDef.methods.any { method ->
-                method.implementation?.instructions?.any { instruction ->
-                    val string = ((instruction as? Instruction21c)?.reference as? StringReference)?.string
-                    string != null && transform(string) != null
-                } == true
-            }
-            if (!hasMatch) return@forEach
-
-            val mutableClass by lazy { mutableClassDefBy(classDef) }
-            classDef.methods.forEach { method ->
-                val mutableMethod = mutableClass.methods.firstOrNull {
-                    it.name == method.name &&
-                        it.returnType == method.returnType &&
-                        it.parameterTypes.toList() == method.parameterTypes.toList()
-                } ?: return@forEach
-
-private fun transformAppPackageString(string: String): String? =
-    when (string) {
-        in APP_PERMISSIONS, in APP_AUTHORITIES -> string.prefixOrReplaceAppPackage()
-        else -> null
-    }
-
-private fun transformContentUri(string: String): String? {
-    val authorityStart = "content://".length
-    val authorityEnd = string.indexOf('/', authorityStart).let { if (it == -1) string.length else it }
-    val authority = string.substring(authorityStart, authorityEnd)
-
-    val replacement = when {
-        authority in APP_AUTHORITIES -> authority.prefixOrReplaceAppPackage()
-        authority == "com.google.android.gms" -> GMS_CORE_PACKAGE
-        authority == "com.google.android.gsf.gservices" -> "app.revanced.android.gsf.gservices"
-        authority == "com.google.settings" -> "app.revanced.settings"
-        authority == "subscribedfeeds" -> "app.revanced.android.gsf.subscribedfeeds"
-        else -> return null
-    }
-
-    return string.replaceRange(authorityStart, authorityEnd, replacement)
-}
+        
 
 private fun String.prefixOrReplaceAppPackage(): String =
     if (startsWith(ORIGINAL_PACKAGE_NAME)) {
