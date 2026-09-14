@@ -318,16 +318,6 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
 
         AccountValidityMonitorCheckFingerprint.method.addInstruction(0, "return-void")
 
-        fun transform(string: String): String? =
-            GMS_STRING_REPLACEMENTS[string]
-                ?: transformAppPackageString(string)
-                ?: when {
-                    string.startsWith("content://") -> transformContentUri(string)
-                    else -> null
-                }
-
-        
-
 private fun String.prefixOrReplaceAppPackage(): String =
     if (startsWith(ORIGINAL_PACKAGE_NAME)) {
         replace(ORIGINAL_PACKAGE_NAME, resolvedPackageName)
