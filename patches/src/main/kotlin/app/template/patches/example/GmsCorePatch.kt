@@ -316,4 +316,8 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
 
         ServiceCheckFingerprint.method.addInstruction(0, "return-void")
 
-        AccountValidityMonitorCheckFingerprint.method.addInstruction(0, "return-void")
+        AccountValidityMonitorCheckFingerprint.method.addInstruction(
+        0,
+        "return-void",
+    )
+}
