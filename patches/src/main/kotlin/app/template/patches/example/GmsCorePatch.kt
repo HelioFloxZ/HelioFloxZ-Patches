@@ -317,10 +317,3 @@ val ytStudioGmsCoreSupportPatch = bytecodePatch(
         ServiceCheckFingerprint.method.addInstruction(0, "return-void")
 
         AccountValidityMonitorCheckFingerprint.method.addInstruction(0, "return-void")
-
-private fun String.prefixOrReplaceAppPackage(): String =
-    if (startsWith(ORIGINAL_PACKAGE_NAME)) {
-        replace(ORIGINAL_PACKAGE_NAME, resolvedPackageName)
-    } else {
-        "$resolvedPackageName.$this"
-    }
