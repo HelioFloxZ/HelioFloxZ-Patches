@@ -5,32 +5,18 @@ import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
 
 object Constants {
-    const val YT_STUDIO_PACKAGE_NAME =
-        "com.google.android.apps.youtube.creator"
 
-    const val VIRTUAL_MASTER_PACKAGE_NAME =
-        "com.clone.android.dual.space"
+    const val GOOGLE_PHONE_PACKAGE_NAME =
+        "com.google.android.dialer"
 
-    val YT_STUDIO_COMPATIBILITY = Compatibility(
-        name = "YouTube Studio",
-        packageName = "com.google.android.apps.youtube.creator",
+    val GOOGLE_PHONE_COMPATIBILITY = Compatibility(
+        name = "Google Phone",
+        packageName = GOOGLE_PHONE_PACKAGE_NAME,
         apkFileType = ApkFileType.APK,
-        appIconColor = 0xFF0000,
+        appIconColor = 0x4285F4,
         targets = listOf(
             AppTarget(
-                version = null
-            )
-        )
-    )
-
-    val VIRTUAL_MASTER_COMPATIBILITY = Compatibility(
-        name = "Virtual Master",
-        packageName = "com.clone.android.dual.space",
-        apkFileType = ApkFileType.APK,
-        appIconColor = 0xFF0000,
-        targets = listOf(
-            AppTarget(
-                version = "3.2.71"
+                version = "236.0.969488611-downloadable"
             )
         )
     )
