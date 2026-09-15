@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.3.0...v1.4.0) (2026-09-15)
+
+### ✨ New Features
+
+* Added VirtualMasterPatch.kt ([b437b95](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/b437b955f28f19bfce8a0a8de5671e678d897e6b))
+
 ## [1.3.0](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.2.1...v1.3.0) (2026-09-15)
 
 ### 🐛 Bug Fixes
