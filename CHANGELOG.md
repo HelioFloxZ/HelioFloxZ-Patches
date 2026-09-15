@@ -1,3 +1,9 @@
+## [1.0.0-dev.8](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2026-09-15)
+
+### ✨ New Features
+
+* Added VirtualMasterPatch.kt ([0ee26a5](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/0ee26a596f73f14b69589066d8217b3e7614be63))
+
 ## [1.0.0-dev.7](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-09-15)
 
 ### 🐛 Bug Fixes
