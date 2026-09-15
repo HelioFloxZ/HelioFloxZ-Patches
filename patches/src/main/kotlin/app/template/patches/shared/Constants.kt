@@ -13,7 +13,7 @@ object Constants {
 
     val YT_STUDIO_COMPATIBILITY = Compatibility(
         name = "YouTube Studio",
-        packageName = com.google.android.apps.youtube.creator,
+        packageName = "com.google.android.apps.youtube.creator",
         apkFileType = ApkFileType.APK,
         appIconColor = 0xFF0000,
         targets = listOf(
@@ -25,7 +25,7 @@ object Constants {
 
     val VIRTUAL_MASTER_COMPATIBILITY = Compatibility(
         name = "Virtual Master",
-        packageName = com.clone.android.dual.space,
+        packageName = "com.clone.android.dual.space",
         apkFileType = ApkFileType.APK,
         appIconColor = 0xFF0000,
         targets = listOf(
