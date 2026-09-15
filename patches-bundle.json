@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-09-14T14:31:38",
-  "description": "## [1.2.1](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.2.0...v1.2.1) (2026-09-14)\n\n### 🐛 Bug Fixes\n\n* Fixed Constants.kt Errors ([8cd3f47](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/8cd3f479d8c995919c095c8231185d63863c741c))\n* fixed GmsCorePatch.kt ([bedb0d4](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/bedb0d4443996adfc7e3b3bcd6529c85d5b3f486))",
-  "download_url": "https://github.com/HelioFloxZ/YouTube-Studio-Patches/releases/download/v1.2.1/patches-1.2.1.mpp",
+  "created_at": "2026-09-15T09:31:29",
+  "description": "## [1.3.0](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.2.1...v1.3.0) (2026-09-15)\n\n### 🐛 Bug Fixes\n\n* Fixed Strings issues in Constants.kt ([a8a84c3](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/a8a84c3721f9dac2bc1dbc3fc73887b64807532a))\n\n### ✨ New Features\n\n* Added Virtual Master Compatibility ([f5d732d](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/f5d732de6b0d999634327965fbd02944c46439f8))",
+  "download_url": "https://github.com/HelioFloxZ/YouTube-Studio-Patches/releases/download/v1.3.0/patches-1.3.0.mpp",
   "signature_download_url": "",
-  "version": "1.2.1"
+  "version": "1.3.0"
 }

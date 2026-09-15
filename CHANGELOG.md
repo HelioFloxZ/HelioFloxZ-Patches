@@ -1,3 +1,13 @@
+## [1.3.0](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.2.1...v1.3.0) (2026-09-15)
+
+### 🐛 Bug Fixes
+
+* Fixed Strings issues in Constants.kt ([a8a84c3](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/a8a84c3721f9dac2bc1dbc3fc73887b64807532a))
+
+### ✨ New Features
+
+* Added Virtual Master Compatibility ([f5d732d](https://github.com/HelioFloxZ/YouTube-Studio-Patches/commit/f5d732de6b0d999634327965fbd02944c46439f8))
+
 ## [1.2.1](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.2.0...v1.2.1) (2026-09-14)
 
 ### 🐛 Bug Fixes
