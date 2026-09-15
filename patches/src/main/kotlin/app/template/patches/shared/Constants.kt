@@ -8,14 +8,29 @@ object Constants {
     const val YT_STUDIO_PACKAGE_NAME =
         "com.google.android.apps.youtube.creator"
 
+    const val VIRTUAL_MASTER_PACKAGE_NAME =
+        "com.clone.android.dual.space"
+
     val YT_STUDIO_COMPATIBILITY = Compatibility(
         name = "YouTube Studio",
-        packageName = YT_STUDIO_PACKAGE_NAME,
+        packageName = com.google.android.apps.youtube.creator,
         apkFileType = ApkFileType.APK,
         appIconColor = 0xFF0000,
         targets = listOf(
             AppTarget(
                 version = null
+            )
+        )
+    )
+
+    val VIRTUAL_MASTER_COMPATIBILITY = Compatibility(
+        name = "Virtual Master",
+        packageName = com.clone.android.dual.space,
+        apkFileType = ApkFileType.APK,
+        appIconColor = 0xFF0000,
+        targets = listOf(
+            AppTarget(
+                version = "3.2.71"
             )
         )
     )
