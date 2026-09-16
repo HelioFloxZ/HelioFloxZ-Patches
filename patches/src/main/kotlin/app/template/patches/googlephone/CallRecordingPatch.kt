@@ -1,31 +1,54 @@
 package app.template.patches.googlephone
 
+import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.patch.PatchException
 import app.morphe.patcher.patch.bytecodePatch
-import morningentree.morphe.patches.dialer.shared.Constants
-import morningentree.morphe.util.returnEarly
+import app.template.patches.shared.Constants.GOOGLE_PHONE_COMPATIBILITY
+import com.android.tools.smali.dexlib2.iface.ClassDef
+import com.android.tools.smali.dexlib2.iface.Method
+
+private val CallRecordingCountryGateFingerprint = Fingerprint(
+    custom = { method: Method, classDef: ClassDef ->
+        classDef.type.contains("callrecording") &&
+            method.returnType == "Z" &&
+            method.parameterTypes.isEmpty()
+    },
+)
 
 @Suppress("unused")
 val enableCallRecordingPatch = bytecodePatch(
     name = "Enable call recording",
-    description = "Enables call recorder, check local laws before using it.",
+    description = "Enables the existing Google Phone call recording capability.",
+    default = true,
 ) {
-    compatibleWith(Constants.COMPATIBILITY)
+    compatibleWith(GOOGLE_PHONE_COMPATIBILITY)
 
     execute {
-        val canRecordClass = CallRecordingCountryGateFingerprint.originalClassDef
-        val mutableCanRecord = mutableClassDefBy(canRecordClass)
+        val classDef = CallRecordingCountryGateFingerprint.originalClassDef
+        val mutableClass = mutableClassDefBy(classDef)
 
-        val availability = mutableCanRecord.methods.filter { method ->
-            method.returnType == "Z" && method.parameterTypes.isEmpty()
+        val candidates = mutableClass.methods.filter { method ->
+            method.returnType == "Z" &&
+                method.parameterTypes.isEmpty()
         }
-        if (availability.size != 1) {
+
+        if (candidates.size != 1) {
             throw PatchException(
-                "Google Phone: expected one no-arg boolean availability method on CanRecord, found " +
-                    "${availability.size}. Re-derive.",
+                "Google Phone: expected one no-argument boolean call-recording " +
+                    "availability method, found ${candidates.size}.",
             )
         }
 
-        availability.single().returnEarly(true)
+        val method = candidates.single()
+
+        method.addInstruction(
+            0,
+            "const/4 v0, 0x1",
+        )
+
+        method.addInstruction(
+            1,
+            "return v0",
+        )
     }
 }
