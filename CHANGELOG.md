@@ -1,3 +1,9 @@
+## [1.0.0-dev.10](https://github.com/HelioFloxZ/HelioFloxZ-Patches/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-09-16)
+
+### 🐛 Bug Fixes
+
+* Fixed Compiler Detecting old code. ([579c15c](https://github.com/HelioFloxZ/HelioFloxZ-Patches/commit/579c15c59021ffabd4be7e9bc19c29aa97bb5250))
+
 ## [1.0.0-dev.9](https://github.com/HelioFloxZ/HelioFloxZ-Patches/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-09-16)
 
 ### 🐛 Bug Fixes
