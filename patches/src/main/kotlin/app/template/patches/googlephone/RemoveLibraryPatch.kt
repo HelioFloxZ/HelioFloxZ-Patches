@@ -11,7 +11,7 @@ val removeDialerSupportLibraryPatch = resourcePatch(
 ) {
     compatibleWith(GOOGLE_PHONE_COMPATIBILITY)
 
-    finalize {
+    execute {
         document("AndroidManifest.xml").use { document ->
             val libraryNodes = document.getElementsByTagName("uses-library")
 
