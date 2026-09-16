@@ -1,3 +1,16 @@
+## [1.0.0-dev.9](https://github.com/HelioFloxZ/HelioFloxZ-Patches/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-09-16)
+
+### 🐛 Bug Fixes
+
+* Fixed Issues In CallRecordingPatch.kt ([949e0a6](https://github.com/HelioFloxZ/HelioFloxZ-Patches/commit/949e0a6179fc4583a05ae1794d4c18b9e9105a27))
+* Fixed Not Supported Codes in Fingerprints.kt ([d85c814](https://github.com/HelioFloxZ/HelioFloxZ-Patches/commit/d85c8148ba1096a3cfae3a72252bb2c3eed48e78))
+
+### ✨ New Features
+
+* Added Call Recording ([945785c](https://github.com/HelioFloxZ/HelioFloxZ-Patches/commit/945785cbbd8ec15dbbcd82b9b0f204323dde62c2))
+* Added Fingerprints.kt ([d3b3bbe](https://github.com/HelioFloxZ/HelioFloxZ-Patches/commit/d3b3bbe35a244a4c3fea6171b286c7975605239e))
+* Added RemoveLibraryPatch.kt ([5d219e8](https://github.com/HelioFloxZ/HelioFloxZ-Patches/commit/5d219e8ed2a17b08a7a6c9cda28deffe6f78fc24))
+
 ## [1.0.0-dev.8](https://github.com/HelioFloxZ/YouTube-Studio-Patches/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2026-09-15)
 
 ### ✨ New Features
