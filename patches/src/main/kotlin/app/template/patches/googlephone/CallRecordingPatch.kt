@@ -12,8 +12,6 @@ val callRecordingPatch = bytecodePatch(
     compatibleWith(GOOGLE_PHONE_COMPATIBILITY)
 
     execute {
-        // Resolve the existing call-recording gate.
-        // The actual recording and consent mechanisms remain unchanged.
         CallRecordingCountryGateFingerprint.method
     }
 }
