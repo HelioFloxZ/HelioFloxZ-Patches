@@ -18,9 +18,17 @@ val changeFlagsPatch = bytecodePatch(
         CallRecordingCountryGateFingerprint.method.addInstructions(
             0,
             """
-                invoke-static {}, Lapp/template/extension/extension/ChangeFlags;->forceCallRecording()Z
+                iget-object v0, p0, Liwz;->c:Landroid/content/Context;
+
+                invoke-static {v0}, Lapp/template/extension/extension/ChangeFlags;->isCallRecordingForced(Landroid/content/Context;)Z
                 move-result v0
+
+                if-eqz v0, :original
+
+                const/4 v0, 0x1
                 return v0
+
+                :original
             """.trimIndent(),
         )
     }
