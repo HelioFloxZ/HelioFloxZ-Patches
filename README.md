@@ -15,7 +15,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.0.0-dev.10](https://github.com/HelioFloxZ/HelioFloxZ-Patches/releases/tag/v1.0.0-dev.10)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+> **[v1.0.0-dev.11](https://github.com/HelioFloxZ/HelioFloxZ-Patches/releases/tag/v1.0.0-dev.11)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
 <details open>
 <summary>📦 Google Phone&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
 <br>
@@ -27,7 +27,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [Call recording support](#call-recording-support) | Prepares the existing Google Phone call-recording implementation for customization. |  |
+| [Call recording support](#call-recording-support) | Enables the Google Phone call-recording eligibility check. |  |
 | [Remove Dialer Support Library](#remove-dialer-support-library) | Removes the unavailable com.google.android.dialer.support shared-library requirement. |  |
 
 </details>

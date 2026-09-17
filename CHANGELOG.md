@@ -1,3 +1,9 @@
+## [1.0.0-dev.11](https://github.com/HelioFloxZ/HelioFloxZ-Patches/compare/v1.0.0-dev.10...v1.0.0-dev.11) (2026-09-17)
+
+### ✨ New Features
+
+* Updated ExamplePatch.java For Change Flags. ([09ce18f](https://github.com/HelioFloxZ/HelioFloxZ-Patches/commit/09ce18f1aa9131d502f299a8303060cc3f516067))
+
 ## [1.0.0-dev.10](https://github.com/HelioFloxZ/HelioFloxZ-Patches/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-09-16)
 
 ### 🐛 Bug Fixes
