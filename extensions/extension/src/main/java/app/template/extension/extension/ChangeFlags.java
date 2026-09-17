@@ -4,17 +4,16 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 @SuppressWarnings("unused")
-public final class ChangeFlags {
+public class ChangeFlags {
 
-    private static final String PREFS_NAME = "heliofloxz_change_flags";
-    private static final String CALL_RECORDING_FORCE = "call_recording_force";
+    private static final String PREFS_NAME = "change_flags";
 
-    private ChangeFlags() {
-    }
+    private static final String FORCE_CALL_RECORDING =
+            "force_call_recording";
 
     public static boolean isCallRecordingForced(Context context) {
         return getPreferences(context).getBoolean(
-                CALL_RECORDING_FORCE,
+                FORCE_CALL_RECORDING,
                 false
         );
     }
@@ -25,7 +24,14 @@ public final class ChangeFlags {
     ) {
         getPreferences(context)
                 .edit()
-                .putBoolean(CALL_RECORDING_FORCE, enabled)
+                .putBoolean(FORCE_CALL_RECORDING, enabled)
+                .apply();
+    }
+
+    public static void resetCallRecording(Context context) {
+        getPreferences(context)
+                .edit()
+                .remove(FORCE_CALL_RECORDING)
                 .apply();
     }
 
