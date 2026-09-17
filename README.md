@@ -15,7 +15,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.6.0](https://github.com/HelioFloxZ/HelioFloxZ-Patches/releases/tag/v1.6.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+> **[v1.7.0](https://github.com/HelioFloxZ/HelioFloxZ-Patches/releases/tag/v1.7.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
 <details open>
 <summary>📦 Google Phone&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
 <br>

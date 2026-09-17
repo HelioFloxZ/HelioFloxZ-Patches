@@ -1,3 +1,9 @@
+## [1.7.0](https://github.com/HelioFloxZ/HelioFloxZ-Patches/compare/v1.6.0...v1.7.0) (2026-09-17)
+
+### ✨ New Features
+
+* Added Logic Of Flags ([c4a2377](https://github.com/HelioFloxZ/HelioFloxZ-Patches/commit/c4a2377f1f5bcbac331444d802106c107454dfcb))
+
 ## [1.6.0](https://github.com/HelioFloxZ/HelioFloxZ-Patches/compare/v1.5.0...v1.6.0) (2026-09-17)
 
 ### 🐛 Bug Fixes
